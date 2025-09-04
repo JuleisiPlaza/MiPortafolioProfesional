@@ -1,0 +1,530 @@
+/*selectores de etiquetas*/
+body{  
+    background-image: url("imagen1.jpg");
+    background-repeat: no-repeat;/*No repita la img*/
+    background-size: cover;  /*La imagen cubra toda el área*/
+    background-position: center;
+    padding: 45px 5%;/*Margen*/
+    margin: 0;/*elimina margenes por defecto*/
+}
+.container{
+    display: relative; /*posicion del eleto respecto a su posicion normal*/
+    position: relative;/* Posicionamiento relativo para elementos hijos */
+    min-height:100vh;/* Altura mínima:  viewport height */
+    background-image:url(fondo.jpg);
+    background-size: cover;  /*La imagen cubra toda el área*/
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    flex-direction: column;/*el contenedor organice sus eletos hijos verticalmente  */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+header {
+    /*reglas del estilo*/
+    /*Color fondo encabezado*/background: #3F5EFB;
+    background: radial-gradient(circle, rgb(154, 159, 180) 0%, rgba(252, 70, 107, 1) 100%);/*Color degradado*/
+    --main-color:#00abf0;
+    color: white;/*color texto*/
+    padding: 18px ;/*margen*/
+    align-items: center;/*alineacion del texto*/
+    display: flex; /*Convierte un elemento contenedor en un contenedor flexible*/
+    justify-content: space-between ; /*distribuye el espacio en medio de los eletos*/
+    position: relative;
+}
+/* Contenedor para las imágenes (GIF, foto de perfil e imagen1) */
+.header-images {
+    display: flex;/*Contenedor flexible, permite controlar la alineacion, distribuyendo el espacio*/
+    justify-content: center; /* Centra horizontalmente el grupo de imágenes */
+    align-items: center; /* Centra verticalmente las imágenes */
+    width: 100%;
+    margin: 15px 0; /* Espacio arriba y abajo */
+}
+
+/* Estilos para las imágenes laterales (GIF e imagen1) */
+.header-side-image {
+    margin: 20px 20px; /* Espacio a los lados de la foto de perfil */
+    flex-shrink: 0; /* Evita que las imágenes se encojan */
+}
+/* GIF a la izquierda */
+.header-left {
+  flex: 1;/*eleto fleible para crecer o encoger*/
+  text-align: center;
+}
+/* Imagen de perfil centrada con texto debajo */
+.header-center {
+  flex: 1.5;/*eleto fleible para crecer o encoger*/
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px; 
+  
+}
+/* Imagen1 a la derecha */
+.header-right {
+  flex: 1;/* eleto fleible para crecer o encoger*/
+  text-align: center;
+}
+
+/* Contenedor para el texto del encabezado  */
+.header-text {
+    width: 100%; 
+    text-align: center; /* Texto centrado */
+    margin-top: 15px; /* Margen superior e inferior */
+    order: 3; /* Coloca el texto después de las imágenes */
+    margin: 0 auto;
+}
+/*imagen perfil--*/
+.modelo {
+    margin-bottom: 15px;
+}
+.img-box{
+    width: 190px;
+    height: 190px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*Ajusta la imagen */
+}
+/*---------------------------*/
+/*Iconos redes */   
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /*separación iconos*/  
+    background: #7DF5BB;
+    background: linear-gradient(90deg, rgba(125, 245, 187, 1) 0%, rgb(231, 135, 194) 50%, rgba(144, 110, 255, 1) 100%);  
+} 
+.redes-sociales a {
+    align-items: center;
+    border-radius: 55%;
+    font-size: 35px;
+    background: transparent;
+}
+.facebook{
+    color: #00abf0;
+}
+.linkedin{
+    color: rgb(10, 102, 194);
+}
+.github{
+     color: rgb(23, 21, 21);
+}
+.redes-sociales a:hover{
+    transform:scale(1.2);/*Agranda el icono */
+}/*hover aplica estilos al pasar el mouse*/   
+/*para enlaces*/
+/*selectores de clases*/
+.barra-navegacion {
+    /*fondo enlaces*/
+    background: #906eff;
+    background: linear-gradient(90deg,#906eff 0%, #ed93cb 63%, #7df5bb 88%);
+    padding: 10px;
+    text-align: center;
+}
+/*selectores de etiquetas hijas*/
+.barra-navegacion a {    
+    color: #2b302c;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+    font-weight: bolder;
+    font-family: "Monaco", "Courier New", monospace;
+    border-bottom: 2px solid #fcd499;
+    border-radius: 25px;
+    transform: scale(0) translateY(50px);
+    opacity: 7;
+    transition: transform 0.5s ease, border-color 0.3s ease;;
+    text-decoration: none;/*Sin subrayado */
+}
+/* Efecto al pasar el mouse */
+.barra-navegacion a:hover,
+.barra-navegacion a.active{
+    border-color: #ffffff;
+} 
+.barra-navegacion span{
+    transform: scale(1.2) translateY(0);
+    opacity: 4;
+}
+/*perfil laboral----------Wrapper envoltorio, organiza y agrupa otros eletos para aplicar estilos*/
+.wrapper{
+    padding: 10px 5%;
+}
+.card_area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    gap: 20px;
+}
+.card{
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);/* añade sombra alrededor del marco del eleto*/
+    height: 280px;
+    overflow: hidden;/*oculta el contenido que excede los limites del contenedor*/
+    cursor: pointer;/*cambia el cursor*/
+    pad: 10px;/*margen*/
+    display: block;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+.card_img{
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 50%;
+    z-index: 1;/*oden cual aparece encima o debajo del otro*/
+    transition: all 0.5s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.overlay{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95); /* Fondo semi-transparente */
+    justify-content: flex-start;
+    display: flex;/*especifica como se veran los eltos*/
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95); /* Fondo semi-transparente */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(20px);
+}
+.overlay.h3{
+    margin: 0 0 15px 0; /* Margen solo inferior */
+    font-size: 20px;
+    font-weight: 600;
+    color: #3F5EFB; /* Color que coincida con tu tema */
+    border-bottom: 2px solid #3F5EFB;
+    padding-bottom: 5px;
+    width: 80%;
+}
+.overlay p, .overlay ul {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    overflow-y: auto; /* Scroll si el contenido es muy largo */
+    max-height: 100px; /* Altura máxima para el texto */
+}
+
+.overlay ul {
+    list-style-position: inside; /* Viñetas dentro del flujo */
+    padding-left: 0; /* Eliminar padding izquierdo */
+}
+.overlay ul li {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.overlay a{
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    background: #000;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px;
+    transition: background 0.3s;
+}
+.overlay a:hover {
+    background: #00abf0; /* Color al hacer hover */
+}
+.card:hover img{
+    transform: scale(1.1);
+}
+.card:hover .overlay{
+    opacity: 1; /*Hace visible el texto*/
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+/*Fondo de la tarjeta cuando no hay hover*/
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3F5EFB 0%, #00abf0 100%);
+    opacity: 0.7;
+    z-index: 1;
+}
+.card:hover:before {
+    opacity: 0.1; /*Fondo casi transparente al hacer hover */
+}
+/*---------EXPERIENCIA-------*/
+/*selector de id*/
+#experiencia {
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    border: 2px solid rgba(6, 61, 40, 0.692); /* Borde del recuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espacio interno */
+    margin: 20px auto; /* Centrado y separación */
+    width: fit-content; /* Ajusta al contenido */
+    background-color: #c8f1c3f1; /* Fondo suave */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+#experiencia table {
+    margin: 0 auto;
+    cursor: grab;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid rgba(18, 110, 75, 0.815);
+}
+#experiencia table td,
+#experiencia table th {
+  text-align: center;
+  vertical-align: middle; /*centra verticalmente el contenido */
+  padding: 2px; /*mejora la legibilidad*/
+}
+/*selector de pseudoclase*/
+#experiencia table:hover {
+  box-shadow: 0 4px 8px rgba(79, 238, 101, 0.952);
+  border: 2px solid rgba(248, 195, 239, 0.986); /* Borde suave */
+  background-color: #f6fff8; /* Color de fondo suave */
+}
+#experiencia h3 {
+    margin-bottom: 5px;
+}
+/*-----------------------------------------*/
+/* Footer contacto */
+footer {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Nuevo degradado azul/morado */
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 0 0 25px 25px; /* Bordes redondeados solo abajo */
+    margin-top: 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil en la parte superior */
+}
+/* Oculta el checkbox */
+#toggle-correo {
+  display: none;
+}
+.btn-button{
+    display: inline-block;/*display en linea pero con dimensiones*/
+    justify-content: center;
+    background-color: #00abf0;
+    color: black;
+    padding: 15px;
+    width: 150px;
+    border: 1px solid #00abf0;
+    border-radius: 25px;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; 
+    font-family: "Times New Roman", serif
+}
+.btn-button:hover{
+    background-color: white;
+    color: #030b38;background: linear-gradient(to right, #5350eb, #09dfee); /* Invertir degradado al pasar mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Efecto al hacer clic */
+.btn-button:active{
+    transform: translateY(1px);
+}
+/* Oculta el correo por defecto */
+.correo {
+    display: none;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+}
+/* Animación para aparecer suavemente */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Texto adicional del footer */
+.footer-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 15px;
+    font-family: "Times New Roman", serif;
+}
+/* Muestra el correo cuando el checkbox está marcado*/
+#toggle-correo:checked + label + .correo {
+  display: block;/*muestra el eleto como columna*/
+}
+/*DEMOSTRACIONES---------------------------------------------------*/
+.recuadro {
+    background-color: rgb(180, 179, 255);background: #bcc7f5;
+    background: radial-gradient(circle, rgba(188, 199, 245, 1) 0%, rgba(235, 143, 161, 1) 100%);
+    border: 2px solid #fa8888;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.recuadro h3 {
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: border;
+    color: #000000;
+    background: #92a3f8;
+}
+ /* Estilo para los iframes (videos) */
+  .recuadro iframe {
+    max-width: 100%;
+    height: auto;
+  }
+/*-Formulario-----------------------------------------------------*/
+  #formulario {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #7cc2de;
+    background: linear-gradient(0deg, rgba(124, 194, 222, 1) 0%, rgb(252, 117, 223) 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+#formulario h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+    color: #f7f0f0;
+    font-size: 15px;
+    font-weight: 500;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9ff5cac5;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #000000;
+}
+/* Recuadro para radios */
+.tipo-app {
+    background-color: #93ffc9a1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.tipo-app label:first-child {
+    display: block;
+    margin-bottom: 15px;
+    font: bold 16px;
+    color: rgb(0, 0, 0);
+}
+.tipo-app input[type="radio"] {
+    margin: 10px;
+}
+textarea {
+    resize: none;
+    height: 120px;
+    width: 100%;
+}
+.checkbox-politicas {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+.checkbox-politicas input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #906eff;
+}
+.checkbox-politicas label {
+    cursor: pointer;
+}
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    background-color: #906eff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 25px;
+    font: 16px "Times New Roman", serif;
+    font-weight: 500;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #fd8ed3;
+}
+/*DISEÑO RESPONSIVE*/
+/* Ajustes para dispositivos con pantalla de hasta 768px */
+@media (max-width: 768px) {
+    /* Cambia la dirección del flexbox a columna */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }    
+    /* Añade margen a los contenedores de imágenes laterales */
+    .header-left, .header-right {
+        margin: 10px 0;
+    }    
+    /* Reduce el tamaño máximo de las imágenes laterales */
+    .header-left img, .header-right img {
+        max-height: 80px;
+    }
+}

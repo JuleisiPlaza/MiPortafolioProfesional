@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <!-- HEAD. contenedor invisible que contiene: el título de la página, enlaces a hojas de estilo-->
+        <title>Mi Portafolio Personal</title>
+        <link rel="stylesheet" href="styles.css"><!--para que aplique los cambios en el CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+        <!--Carga los iconos-->
+    </head>
+    <body>
+        <div class="container">
+            <!--Encabezado de la pagina, sirve para estructurar-->
+            <header>
+                <!--Div, Contenedor generico agrupa eletos y estilos CSS-->
+                <div class="header-left">
+                    <img src="op3.gif" alt="animacion" width="80%" height="40%">
+                </div>                           
+                <div class="header-profile">
+                    <div class="modelo">
+                        <div class="img-box">
+                            <img src="perfil.jpeg" alt="Foto de perfil">
+                        </div>
+                    </div>
+                <div class="header-text">
+                    <h1><i>Portafolio Profesional</i></h1><!--Titulo en cursiva-->
+                    <h1><i>Juleisi Plaza</i></h1>
+                    <h2><i>Web developer</i></h2>
+                </div>        
+                </div>
+                 <div class="header-right">
+                    <img src="imagen1.jpg" alt="banner" width="40%" height="40%">
+                </div> 
+            </header>                    
+            <br>
+            <!--Iconos de redes sociales -->
+            <!-- Contenedor genérico,que agrupa y estructura eletos,se le pueden asignar estilos CSS-->
+            <div class="redes-sociales">
+                <!--Craear un enlace a otra pagina -->
+                <a href="https://www.facebook.com/"  class="facebook" target="_blank">
+                    <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://co.linkedin.com/" class="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/JuleisiPlaza" class="github" target="_blank">
+                    <i class="fa-brands fa-github"></i></a>
+            </div>
+            <br>
+            <nav class="barra-navegacion">
+                <!--Nav contenedor para menu-->
+                <a href="index.html">Inicio</a>
+                <a href="demo.html">Demostraciones</a>
+                <a href="formulario1.html">Formulario para proyectos</a>
+            </nav>
+            <section>
+            <!--contenido-->
+                <div class="wrapper">
+                    <div class="card_area">
+                        <div class="card">
+                            <img src="cv.png">
+                            <div class="overlay">
+                                <h3>Perfil Profesional</h3>
+                                <p> Estudiante de Ingeniería de Sistemas en etapa final de formación, 
+                                    con conocimientos en programación, análisis de sistemas, bases de datos y redes. 
+                                    Familiarizada con metodologías y herramientas modernas de desarrollo.
+                                </p>
+                                <a href="#"Book></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card_area">
+                        <div class="card">
+                            <img src="academic.jpg">
+                            <div class="overlay">
+                                <h3>Formación académica</h3>
+                                <br>
+                                <!--Ul pone los puntos negros del li, li cada elto de la lista -->
+                                <ul>
+                                    <li>Ingeniera en sistemas-Unicomfacauca</li>
+                                    <li>Especialista en Análisis de Seguridad</li>
+                                    <li>Especialista en Administración de Bases de Datos</li>
+                                </ul>
+                                <a href="#"Book></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card_area">
+                        <div class="card">
+                            <img src="habilidad.jpg">
+                            <div class="overlay">
+                                <h3>Habilidades</h3>
+                                <ul>
+                                    <li>Comunicación asertiva</li>
+                                    <li>Resolución de problemas</li>
+                                    <li>Creatividad</li>
+                                    <li>Productividad</li>
+                                </ul>
+                                <a href="#"Book></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+                <article id="experiencia">
+                    <h3>Experiencia laboral</h3>
+                    <table border="2" width="400px">
+                        <tr>
+                            <th>Empresa</th>
+                            <th>Rol</th>
+                            <th>Tiempo</th>
+                        </tr>
+                        <tr>
+                            <td>Google Corporation</td>
+                            <td>Developer Senior</td>
+                            <td>2 años</td>
+                        </tr>
+                       
+                        <tr>
+                            <td>Microsoft Corporation</td>
+                            <td>Desarrolladora fullstack</td>
+                            <td>2 años</td>
+                        </tr>
+                    </table>
+                
+                </article>             
+            </section>
+            <!--Informacion que aparece en la parte de abajo de las paginas-->
+            <section>
+                <footer>
+                    <!-- Checkbox oculto que controla la visibilidad -->
+                    <input type="checkbox" id="toggle-correo">
+                    <!-- Botón que activa el checkbox -->
+                    <label for="toggle-correo" class="btn-button">Contáctame</label>
+                    <!-- Contenedor del correo que se mostrará -->
+                    <div class="correo">Correo: juleisiplaza@unicomfacauca.edu.co</div>
+                     <!-- Texto adicional opcional -->
+                    <div class="footer-text">© 2025 Portafolio Profesional. Todos los derechos reservados.</div>
+                </footer>
+            </section>
+        </div>        
+    </body>
+</html>
